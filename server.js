@@ -14,16 +14,21 @@ app.get('/hello', (req, res) => {
 });
 
 // Start the server and listen on the specified port
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
   console.log(`Try accessing: http://localhost:${PORT}/hello`);
 });
 
-// Handle server startup errors
-app.on('error', (error) => {
+// Handle server startup errors (errors are emitted by the server instance)
+server.on('error', (error) => {
   if (error.code === 'EADDRINUSE') {
-    console.error(`Port ${PORT} is already in use. Please try a different port.`);
+    console.error(`Error: Port ${PORT} is already in use. Please try a different port.`);
+    process.exit(1);
   } else {
     console.error('Server error:', error);
+    process.exit(1);
   }
 });
+
+// Export the Express app instance for potential testing or extension
+module.exports = app;
