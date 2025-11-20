@@ -1,0 +1,24 @@
+{
+  "name": "nodejs-hello-tutorial",
+  "version": "1.0.0",
+  "description": "Node.js tutorial project with a /hello endpoint that returns Hello world using Express.js",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "tutorial",
+    "hello-world"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
