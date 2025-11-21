@@ -1,0 +1,21 @@
+{
+  "name": "nov18_11",
+  "version": "1.0.0",
+  "description": "Node.js Express tutorial with Hello World and Good Evening endpoints",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express",
+    "tutorial",
+    "nodejs",
+    "http"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
